@@ -1,54 +1,40 @@
-# WinnersHub - Bet9ja Big Winners Showcase
+# WinnersHub 🏆
 
-A modern, responsive web application showcasing the biggest winners across all Bet9ja betting categories. Built with Next.js 14, TypeScript, and Tailwind CSS.
+A modern, responsive showcase for Bet9ja big winners with stunning animations and real-time statistics.
 
-## 🎯 Objective
-
-Bet9ja has an issue surrounding low awareness of cash/bonuses/prizes awarded to customers. This application increases awareness and visibility by creating a dedicated section to visually advertise customers winning big across different betting opportunities.
+![WinnersHub Preview](https://img.shields.io/badge/Next.js-14.0.4-black?style=for-the-badge&logo=next.js)
+![TypeScript](https://img.shields.io/badge/TypeScript-5.0-blue?style=for-the-badge&logo=typescript)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-3.3-38B2AC?style=for-the-badge&logo=tailwind-css)
+![Framer Motion](https://img.shields.io/badge/Framer_Motion-10.16-black?style=for-the-badge&logo=framer)
 
 ## ✨ Features
 
-### 🏆 Winner Categories
-- **Biggest betBOOMs Wins** - Explosive high-stakes game winners
-- **Biggest Cash Out Wins** - Strategic cash out champions
-- **Biggest Sportsbook Wins** - Traditional sports betting winners
-- **UCL Jackpot Winners** - Champions League jackpot champions
-- **Biggest Casino Winners** - Slot machines and live casino champions
-- **Biggest Stadium Winner** - Virtual sports champions
-- **Biggest Simulate Winner** - Simulation game masters
-- **Biggest Zoom Winner** - Fast-paced Zoom game champions
+- **Modern Design**: Black and acid green branding with Archivo SemiExpanded Bold typography
+- **Responsive Layout**: Optimized for desktop, tablet, and mobile devices
+- **Smooth Animations**: Parallax scrolling, animated counters, and 3D hover effects
+- **Real-time Stats**: Live winner statistics and payout information
+- **Category Showcase**: Multiple betting categories with detailed winner profiles
+- **Performance Optimized**: Built with Next.js 14 for optimal performance
 
-### 📊 Data Granularity
-- **All-time** - Greatest wins of all time
-- **Last 7 days** - This week's biggest winners (Monday 00:00 - Sunday 23:59)
+## 🚀 Live Demo
 
-### 🎨 Design Features
-- **Brand Identity** - Black, acid green (#00FF41), white lightning bolt iconography
-- **Typography** - Archivo SemiExpanded Bold font family
-- **Responsive Design** - Mobile-first approach
-- **Animations** - Smooth Framer Motion animations
-- **Interactive Elements** - Hover effects and transitions
+[View Live Demo](https://winnershub.vercel.app) *(Coming Soon)*
 
-### 📈 Leaderboard Features
-- Top 10 winners per category
-- User ID, Stake, Payout, Bet ID display
-- Multiplier information
-- Visual progress bars
-- Trophy icons for top 3 positions
-- Real-time currency formatting (NGN)
+## 🛠️ Tech Stack
 
-## 🚀 Getting Started
+- **Framework**: Next.js 14 (App Router)
+- **Language**: TypeScript
+- **Styling**: Tailwind CSS
+- **Animations**: Framer Motion
+- **Icons**: Lucide React
+- **Deployment**: Vercel
 
-### Prerequisites
-- Node.js 18+ 
-- npm or yarn
-
-### Installation
+## 📦 Installation
 
 1. **Clone the repository**
    ```bash
-   git clone <repository-url>
-   cd WinnersHub
+   git clone https://github.com/yourusername/winnershub.git
+   cd winnershub
    ```
 
 2. **Install dependencies**
@@ -64,100 +50,88 @@ Bet9ja has an issue surrounding low awareness of cash/bonuses/prizes awarded to 
 4. **Open your browser**
    Navigate to [http://localhost:3000](http://localhost:3000)
 
-### Build for Production
+## 🎯 Project Structure
 
+```
+WinnersHub/
+├── app/                    # Next.js App Router
+│   ├── page.tsx           # Homepage
+│   ├── about/page.tsx     # About page
+│   └── winners/[category]/ # Dynamic winner pages
+├── components/            # Reusable components
+│   ├── layout/           # Layout components
+│   ├── ui/              # UI components
+│   └── winners/         # Winner-specific components
+├── data/                # Static data and mock content
+├── lib/                 # Utility functions
+└── types/               # TypeScript type definitions
+```
+
+## 🎨 Design Features
+
+### Visual Elements
+- **Parallax Backgrounds**: Dynamic scrolling effects
+- **Animated Counters**: Number animations triggered on scroll
+- **3D Hover Effects**: Interactive card animations
+- **Glowing Text**: Acid green text with shadow effects
+- **Floating Particles**: Ambient background animations
+
+### Responsive Design
+- **Mobile First**: Optimized for all screen sizes
+- **Touch Friendly**: Smooth interactions on mobile devices
+- **Performance**: Optimized animations and loading
+
+## 📱 Pages
+
+### Homepage
+- Hero section with animated statistics
+- Winner categories grid
+- Live update indicators
+- Scroll animations
+
+### Winner Categories
+- Dynamic category pages
+- Winner leaderboards
+- Performance charts
+- Time period toggles
+
+### About Page
+- Project information
+- Feature showcase
+- Statistics overview
+
+## 🚀 Deployment
+
+### Vercel (Recommended)
+1. Push to GitHub
+2. Connect repository to Vercel
+3. Deploy automatically
+
+### Manual Deployment
 ```bash
 npm run build
 npm start
 ```
 
-## 🏗️ Project Structure
+## 🤝 Contributing
 
-```
-WinnersHub/
-├── app/                    # Next.js App Router
-│   ├── layout.tsx         # Root layout
-│   ├── page.tsx           # Homepage
-│   ├── globals.css        # Global styles
-│   └── winners/           # Winner category pages
-│       └── [category]/    # Dynamic category pages
-├── components/            # React components
-│   ├── ui/               # UI components
-│   ├── layout/           # Layout components
-│   └── winners/          # Winner-specific components
-├── data/                 # Data and mock data
-├── lib/                  # Utility functions
-├── types/                # TypeScript type definitions
-└── public/               # Static assets
-```
-
-## 🎨 Brand Guidelines
-
-### Colors
-- **Primary Black**: #000000
-- **Acid Green**: #00FF41
-- **White**: #FFFFFF
-
-### Typography
-- **Primary Font**: Archivo SemiExpanded Bold
-- **Fallback**: Archivo (Google Fonts)
-
-### Icons
-- **Primary**: Lightning bolt (Zap) from Lucide React
-- **Secondary**: Trophy, Info, TrendingUp, ArrowLeft
-
-## 📱 Responsive Design
-
-The application is fully responsive with breakpoints:
-- **Mobile**: < 768px
-- **Tablet**: 768px - 1024px
-- **Desktop**: > 1024px
-
-## 🔄 Data Updates
-
-- **Update Cycle**: Every 24 hours
-- **Data Source**: Currently using mock data
-- **Real Implementation**: Would connect to Bet9ja's backend APIs
-
-## 🛠️ Technology Stack
-
-- **Framework**: Next.js 14 with App Router
-- **Language**: TypeScript
-- **Styling**: Tailwind CSS
-- **Animations**: Framer Motion
-- **Icons**: Lucide React
-- **Fonts**: Google Fonts (Archivo)
-
-## 📋 Requirements Met
-
-✅ **Dedicated pages** for each betting category  
-✅ **Hero banner** at the top of each page  
-✅ **Leaderboard** with top 10 winners  
-✅ **User ID, Stake, Payout, Bet ID** display  
-✅ **Time period toggle** (All-time / Last 7 days)  
-✅ **Max stake limit** of ₦1,000,000  
-✅ **Sorting by highest amount won**  
-✅ **More Info section** with category summary  
-✅ **Brand visual identity** with black, acid green, lightning bolts  
-✅ **Archivo SemiExpanded Bold** typography  
-✅ **Responsive design**  
-✅ **Dummy data** for prototype demonstration  
-
-## 🎯 Future Enhancements
-
-- [ ] Real API integration with Bet9ja backend
-- [ ] Social media post embedding
-- [ ] Image/video asset uploads
-- [ ] Admin panel for content management
-- [ ] Real-time updates via WebSocket
-- [ ] User authentication and profiles
-- [ ] Push notifications for new winners
-- [ ] Analytics and reporting dashboard
+1. Fork the repository
+2. Create a feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
 
 ## 📄 License
 
-This project is proprietary to Bet9ja.
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## 🤝 Contributing
+## 🙏 Acknowledgments
 
-This is a prototype for Bet9ja. For questions or feedback, please contact the development team. 
+- **Bet9ja**: For inspiration and betting categories
+- **Next.js Team**: For the amazing framework
+- **Tailwind CSS**: For the utility-first CSS framework
+- **Framer Motion**: For smooth animations
+
+---
+
+**Built with ❤️ for the Bet9ja community** 
