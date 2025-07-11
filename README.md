@@ -2,6 +2,12 @@
 
 A modern, responsive web application showcasing the biggest winners across all Bet9ja betting categories. Built with Next.js 14, TypeScript, and Tailwind CSS.
 
+## 🌐 Live Demo
+
+**Visit the live site:** [https://winnershub.web.app](https://winnershub.web.app)
+
+*Experience the full WinnersHub application with all features and animations.*
+
 ## 🎯 Objective
 
 Bet9ja has an issue surrounding low awareness of cash/bonuses/prizes awarded to customers. This application increases awareness and visibility by creating a dedicated section to visually advertise customers winning big across different betting opportunities.
