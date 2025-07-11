@@ -3,6 +3,7 @@
 import { motion } from 'framer-motion';
 import { Zap, Home, Trophy, Info, Menu, X } from 'lucide-react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { useState } from 'react';
 import { LiveIndicator } from '@/components/ui/Graphics';
 
@@ -39,10 +40,19 @@ export default function Header({ title, showBackButton = false }: HeaderProps) {
                 <Zap size={24} className="md:w-8 md:h-8 text-acid-green" />
               </motion.div>
               <div className="hidden sm:block">
-                <div className="text-lg md:text-xl font-archivo-semiexpanded font-bold text-acid-green">
-                  WinnersHub
+                <div className="flex items-center gap-2">
+                  <Image
+                    src="/bet9ja-logo-simple.svg"
+                    alt="Bet9ja Logo"
+                    width={80}
+                    height={24}
+                    className="h-6 w-auto"
+                  />
+                  <div className="text-lg md:text-xl font-archivo-semiexpanded font-bold text-acid-green">
+                    WinnersHub
+                  </div>
                 </div>
-                <div className="text-xs text-gray-400">Bet9ja Champions</div>
+                <div className="text-xs text-gray-400">Official Winners Showcase</div>
               </div>
             </Link>
           </motion.div>

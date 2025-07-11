@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion';
 import { Zap, Trophy, Users, TrendingUp, Shield, Award } from 'lucide-react';
+import Image from 'next/image';
 import Header from '@/components/layout/Header';
 
 export default function AboutPage() {
@@ -18,6 +19,20 @@ export default function AboutPage() {
             transition={{ duration: 0.6 }}
             className="text-center max-w-4xl mx-auto"
           >
+            <motion.div
+              className="mb-6"
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.1 }}
+            >
+              <Image
+                src="/bet9ja-logo.svg"
+                alt="Bet9ja Logo"
+                width={150}
+                height={45}
+                className="h-10 md:h-12 w-auto mx-auto"
+              />
+            </motion.div>
             <motion.h1
               className="text-4xl md:text-6xl font-archivo-semiexpanded font-bold text-acid-green mb-6"
               animate={{ 
@@ -62,7 +77,7 @@ export default function AboutPage() {
               {
                 icon: TrendingUp,
                 title: "Real-time Updates",
-                description: "Live updates every 6 hours to keep you informed about the latest winners and payouts."
+                description: "Stay informed about the latest winners and payouts."
               },
               {
                 icon: Users,
@@ -133,8 +148,8 @@ export default function AboutPage() {
             {[
               { number: "₦250M+", label: "Total Payouts" },
               { number: "5,000+", label: "Winners" },
-              { number: "8", label: "Categories" },
-              { number: "6h", label: "Update Cycle" }
+              { number: "8", label: "Categories" }
+              // Removed update cycle stat
             ].map((stat, index) => (
               <motion.div
                 key={index}

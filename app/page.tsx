@@ -3,6 +3,7 @@
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { Zap, Trophy, TrendingUp, Star, Crown, Award, Clock, Users, DollarSign } from 'lucide-react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { categories } from '@/data/categories';
 import { useEffect, useRef, useState } from 'react';
 
@@ -126,6 +127,22 @@ export default function HomePage() {
           style={{ opacity, scale }}
           className="relative z-10 text-center px-4 w-full max-w-7xl mx-auto"
         >
+          {/* Bet9ja Logo */}
+          <motion.div
+            className="mb-6 md:mb-8"
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.1 }}
+          >
+            <Image
+              src="/bet9ja-logo.svg"
+              alt="Bet9ja Logo"
+              width={200}
+              height={60}
+              className="h-12 md:h-16 w-auto mx-auto"
+            />
+          </motion.div>
+
           {/* Main Title */}
           <motion.h1 
             className="text-5xl md:text-7xl lg:text-8xl font-archivo-semiexpanded font-bold text-acid-green mb-4 md:mb-6"
@@ -265,27 +282,7 @@ export default function HomePage() {
             </motion.div>
           </motion.div>
           
-          {/* Live Status */}
-          <motion.div 
-            className="flex items-center justify-center gap-3 text-acid-green mb-8 md:mb-12"
-            initial={{ opacity: 0, scale: 0.8 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.6, delay: 1.6 }}
-          >
-            <motion.div
-              animate={{ scale: [1, 1.2, 1] }}
-              transition={{ duration: 1.5, repeat: Infinity, delay: 0.5 }}
-            >
-              <div className="w-2 h-2 bg-acid-green rounded-full animate-pulse"></div>
-            </motion.div>
-            <span className="text-sm md:text-lg font-semibold">Updated every 24 hours</span>
-            <motion.div
-              animate={{ scale: [1, 1.2, 1] }}
-              transition={{ duration: 1.5, repeat: Infinity, delay: 1 }}
-            >
-              <Star size={20} className="md:w-6 md:h-6" />
-            </motion.div>
-          </motion.div>
+          {/* Live Status section completely removed */}
 
           {/* Scroll Indicator */}
           <motion.div

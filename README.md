@@ -113,9 +113,8 @@ The application is fully responsive with breakpoints:
 - **Tablet**: 768px - 1024px
 - **Desktop**: > 1024px
 
-## 🔄 Data Updates
+## �� Data Updates
 
-- **Update Cycle**: Every 24 hours
 - **Data Source**: Currently using mock data
 - **Real Implementation**: Would connect to Bet9ja's backend APIs
 
